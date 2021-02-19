@@ -1,0 +1,2 @@
+# gfn_documents_fachinformatiker_2021
+Dokumentenzusammenstellung des Umschulungskurses Fachinformatiker der GFN Feb_2021
