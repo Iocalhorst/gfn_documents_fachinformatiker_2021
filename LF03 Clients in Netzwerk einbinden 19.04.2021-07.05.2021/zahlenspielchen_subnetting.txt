@@ -1,0 +1,84 @@
+Beispiel
+
+192.168.150.0 /24	(oder 255.255.255.0)
+
+Erstellen Sie 4 Netze
+
+Wo passt die 4 rein? 
+
+	|	
+2	4	8	16	32	64	128	256
+
+Wir benötigen 2 bits. Beim ersten Bit haben wir schon 2 Zustände.
+
+4 Netze insgesamt. 0 Netze sind "verschwendet".
+
+11111111.11111111.11111111.00000000
+			11111111.11111111.11111111.11 000000
+
+Neue Subnetzmaske? /26
+255.255.255.192
+
+Wandle die IP in Binary
+192.168.150.0		11000000.10101000.10010110.00 000000
+		       |--------------------------|--|------|
+				Netzwerk 	  SUB   Host
+				   ID		   ID	 ID
+						     |000000|
+						      Netzadresse für z.B.: Routing/Firewall
+
+						     |111111|
+						      Broadcast
+
+
+Folgende Netze wird es geben:
+						     |-----Range-----|	
+			11000000.10101000.10010110.00 000000 bis 111111
+			11000000.10101000.10010110.01 000000 bis 111111
+			11000000.10101000.10010110.10 000000 bis 111111
+			11000000.10101000.10010110.11 000000 bis 111111
+
+Netz 1
+
+Netzwork ID		11000000.10101000.10010110.00 000000
+Network ID		192.168.150.0
+Broadcast ID		11000000.10101000.10010110.00 111111
+Broadcast ID		192.168.150.63
+Erste nutzbare IP	11000000.10101000.10010110.00 000001
+Erste nutzbare IP	192.168.150.1
+Letzte nutzbare IP	11000000.10101000.10010110.00 111110
+Letzte nutzbare IP	192.168.150.62
+
+
+Netz 2
+
+Network ID		11000000.10101000.10010110.01 000000
+Network ID		192.168.150.64
+Broadcast ID		11000000.10101000.10010110.01 111111
+Broadcast ID		192.168.150.127
+Erste nutzbare IP	11000000.10101000.10010110.01 000001
+Erste nutzbare IP	192.168.150.65
+Letzte nutzbare IP	11000000.10101000.10010110.01 111110
+Letzte nutzbare IP	192.168.150.126
+
+Netz 3
+
+Network ID		11000000.10101000.10010110.10 000000
+Network ID		192.168.150.128
+Broadcast ID		11000000.10101000.10010110.10 111111
+Broadcast ID		192.168.150.191
+Erste nutzbare IP	11000000.10101000.10010110.10 000001
+Erste nutzbare IP	192.168.150.129
+Letzte nutzbare IP	11000000.10101000.10010110.10 111110
+Letzte nutzbare IP	192.168.150.190
+
+Netz 4
+
+Network ID		11000000.10101000.10010110.11 000000
+Network ID		192.168.150.192
+Broadcast ID		11000000.10101000.10010110.11 111111
+Broadcast ID		192.168.150.255
+Erste nutzbare IP	11000000.10101000.10010110.11 000001
+Erste nutzbare IP	192.168.150.193
+Letzte nutzbare IP	11000000.10101000.10010110.11 111110
+Letzte nutzbare IP	192.168.150.254
