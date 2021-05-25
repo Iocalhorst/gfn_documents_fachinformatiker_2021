@@ -1,0 +1,6 @@
+Android Studio				apache-lizenz, open source
+NetBeans IDE				Fortran, JavaScript, Groovy 								apache-lizenz, open source
+Eclipse						Eclipse-public-license, open 								source
+Visual Studio					proprietary
+Apple XCode				proprietary
+Code::Blocks			open source
