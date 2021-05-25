@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.31-03" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" namespace="" author="cf_ar" created="2021-05-21" changedby="cf_ar" changed="2021-05-21" origin="Structorizer 3.31-03" text="&#34;Funktion: berechneGesamtbetrag&#34;,&#34;Übergabe: grundbetrag:Gleitkommazahl,alter:Ganzzahl,kmLeistung:Ganzzahl,garage:Ganzzahl ( 0 false, 1 true)&#34;,&#34;Rückgabe: gesamtbetrag:Gleitkommazahl &#34;" comment="&#34;&#34;" color="ffffff" type="program" style="nice">
+	<children>
+		<alternative text="&#34;(alter &#62; 25?)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;gesamtbetrag := grundbetrag * 0,9&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<instruction text="&#34;gesamtbetrag := grundbetrag * 1,4&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFalse>
+		</alternative>
+		<alternative text="&#34;( kmLeistung &#62; 15000 ?)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;gesamtbetrag := gesamtbetrag + grundbetrag * 0,2&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<instruction text="&#34;gesamtbetrag := gesamtbetrag - grundbetrag * 0,1 &#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFalse>
+		</alternative>
+		<alternative text="&#34;(garage = true?)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+			<qTrue>
+				<instruction text="&#34;gesamtbetrag := gesamtbetrag - grundbetrag * 0,05&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qTrue>
+			<qFalse>
+				<instruction text="&#34;gesamtbetrag := gesamtbetrag + grundbetrag * 0,05&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+			</qFalse>
+		</alternative>
+		<instruction text="&#34;Rückgabe gesamtbetrag&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+	</children>
+</root>
