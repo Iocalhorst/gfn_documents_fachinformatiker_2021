@@ -1,0 +1,4 @@
+https://www.philipphauer.de/study/se/design-pattern.php
+https://de.wikibooks.org/wiki/Algorithmensammlung:_Zahlentheorie:_Euklidischer_Algorithmus
+https://joshua-f1998.medium.com/mvc-minimum-viable-code-418f93bb4d51
+https://www.philipphauer.de/study/se/design-pattern/strategy.php
