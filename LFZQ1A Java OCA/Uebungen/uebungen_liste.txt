@@ -1,0 +1,8 @@
+Übung 3
+/*Schreibe ein kleines Programm, in dessen Main-Methode der Nutzer aufgefordert wird, seinen Namen über die Kommandozeile einzugeben.
+Im Anschluss wird der Nutzer entsprechend mit seinem Namen begrüßt (z.B. "Hallo Fabian!");
+Betätigt der Nutzer die Return-Taste, ohne etwas eingegeben zu haben, wird "Hallo Nutzer" angezeigt. */
+
+Übung 4
+
+wie 3, allerdings mit eigener Userklasse
