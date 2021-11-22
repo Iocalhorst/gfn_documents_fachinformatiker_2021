@@ -1,0 +1,57 @@
+package Strom;
+
+//Entwickle eine eigene Klasse, die in der Lage ist, die physikalischen Größen von elektrischem Strom zu berechnen.
+//
+//Die Größen sind Spannung (U [Volt]), Widerstand (R [Ohm]) und Stromstärke (I [Ampere]).
+//
+//Formel: U = R * I
+//
+//Die Klasse benötigt also drei Methoden, eine zur Berechnung jeder physikalischen Größe. Es müssen jeweils zwei Werte übergeben werden.
+
+public class Strom {
+	
+	/*Instanzvariablen - zwei müssen über den Konstruktor auf einen Wert gesetzt werden, der nicht 0.0 ist */
+	private double U = 0.0;
+	private double R = 0.0;
+	private double I = 0.0;
+	
+	public double getU() {
+		return U;
+	}
+	public double getR() {
+		return R;
+	}
+	public double getI() {
+		return I;
+	}
+	
+	/* Der Konstruktor soll für eine der Instanzvariablen den Wert 0 erhalten */
+	public Strom (double widerstand, double stromstärke, double spannung) {
+		this.U = spannung;
+		this.R = widerstand;
+		this.I = stromstärke;
+		
+		/* wenn der Widerstand nicht mitgeteilt wurde, wird er aus den beiden anderen Werten errechnet */
+		if (widerstand == 0.0) {
+			setWiderstand();
+			/* wenn die Stromstärke nicht mitgeteilt wurde, wird sie aus den beiden anderen Werten errechnet */
+		} else if (stromstärke == 0.0) {
+			setStromstärke();
+			/* wenn die Spannung nicht mitgeteilt wurde, wird sie aus den beiden anderen Werten errechnet */
+		} else if (spannung == 0.0) {
+			setSpannung();
+		}
+	}
+	
+	public void setSpannung() {
+		this.U = this.R * this.I;
+	}
+	public void setWiderstand() {
+		this.R = this.U / this.I;
+	}
+	public void setStromstärke() {
+		this.I = this.U / this.R;
+	}
+
+
+}

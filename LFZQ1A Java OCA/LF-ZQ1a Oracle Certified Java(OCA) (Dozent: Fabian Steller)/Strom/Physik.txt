@@ -1,0 +1,52 @@
+package Strom;
+
+import java.util.Scanner;
+
+public class Physik {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Willkommen beim Stromrechner!");
+		System.out.println("Was soll ausgerechnet werden? (Bitte Zahl angeben.)");
+		System.out.println("1. Stromstärke");
+		System.out.println("2. Spannung");
+		System.out.println("3. Widerstand");
+		int input = sc.nextInt();
+		double spannung = 0.0;
+		double widerstand = 0.0;
+		double stromstärke = 0.0;
+		Strom s;
+		switch (input) {
+		case 1:
+			System.out.println("Bitte gib die Spannung ein.");
+			spannung = sc.nextDouble();
+			System.out.println("Bitte gib den Widerstand ein.");
+			widerstand = sc.nextDouble();
+			s = new Strom(widerstand, stromstärke, spannung);
+			stromstärke = s.getI();
+			System.out.println("Die Stromstärke ist " + stromstärke + ".");
+			System.out.println("Danke für die Nutzung des Stromrechners!");
+			break;
+		case 2:
+			System.out.println("Bitte gib die Stromstärke ein.");
+			stromstärke = sc.nextDouble();
+			System.out.println("Bitte gib den Widerstand ein.");
+			widerstand = sc.nextDouble();
+			s = new Strom(widerstand, stromstärke, spannung);
+			spannung = s.getU();
+			System.out.println("Die Spannung ist " + spannung + ".");
+			System.out.println("Danke für die Nutzung des Stromrechners!");
+			break;
+		case 3:
+			System.out.println("Bitte gib die Spannung ein.");
+			spannung = sc.nextDouble();
+			sc.nextLine();
+			System.out.println("Bitte gib die Stromstärke ein.");
+			stromstärke = sc.nextDouble();
+			s = new Strom(widerstand, stromstärke, spannung);
+			widerstand = s.getR();
+			System.out.println("Der Widerstand ist "+widerstand+".");
+			System.out.println("Danke für die Nutzung des Stromrechners!");
+		}
+		
+	}
+}
